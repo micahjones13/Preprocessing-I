@@ -140,6 +140,15 @@ body {
   flex-flow: row-reverse wrap;
   justify-content: center;
   align-items: center;
+  background-color: lightblue;
+}
+@media (max-width: 500px) {
+  .intro {
+    background: lightblue;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    padding: 10px;
+  }
 }
 .intro img {
   width: 15%;
@@ -151,12 +160,33 @@ body {
   list-style-type: square;
   list-style-position: inside;
 }
+@media (max-width: 500px) {
+  .intro ul {
+    font-size: 1em;
+    padding: 0px;
+  }
+}
 .intro p {
   font-size: 1.25rem;
+}
+@media (max-width: 500px) {
+  .intro p {
+    font-size: 1em;
+    padding: 10px;
+  }
 }
 .intro .p-list {
   width: 25%;
   margin-left: 40px;
+}
+@media (max-width: 500px) {
+  .intro .p-list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
 }
 .intro button {
   font-size: 15px;
@@ -167,22 +197,40 @@ body {
   border: 3px solid black;
   width: 200px;
 }
-body {
-  background: lightblue;
+@media (max-width: 500px) {
+  .intro button {
+    width: 50%;
+  }
 }
 header {
-  margin-bottom: 20px;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  background: lightgray;
+  padding: 15px;
 }
 header h1 {
   font-size: 2.5rem;
 }
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+  header h1 .h1-span {
+    display: none;
+  }
+}
 header a {
   margin: 30px;
   font-size: 1.25rem;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  header a {
+    font-size: 1.25rem;
+    margin: 25px;
+  }
 }
 .border {
   border: 1px solid red;
@@ -193,49 +241,79 @@ h2 {
   margin-top: 30px;
 }
 .skills {
-  margin-top: 95px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: white;
   padding: 20px;
 }
-.skills img {
-  width: 33%;
-}
 .skills p {
   font-size: 1.25rem;
   margin-bottom: 20px;
+  text-decoration: underline;
 }
 .skills ul {
   font-size: 1.25rem;
   list-style-type: square;
   list-style-position: inside;
 }
+.skills li {
+  border: 1px solid lightgray;
+  padding: 10px;
+  background: aliceblue;
+}
+.skills .p-list {
+  padding: 100px;
+}
+.skills h2 {
+  font-size: 2.5rem;
+}
 .table-border {
-  border: 1px solid black;
+  border: 3px solid black;
 }
 .work-history {
-  margin-top: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 40px;
+  background: lightblue;
 }
 .work-history table {
   width: 100%;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 .work-history th {
   font-size: 1.75rem;
   height: 50px;
   padding: 20px;
   font-weight: bold;
+  background: lightgrey;
 }
 .work-history th,
 .work-history td {
-  border: 1px solid black;
+  border: 3px solid black;
   height: 30px;
   padding: 20px;
 }
 .work-history h2 {
   text-align: left;
   padding: 20px;
+}
+.work-history td {
+  font-size: 1.25rem;
+  background: aliceblue;
+}
+footer {
+  background: gray;
+  height: 75px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+footer img {
+  width: 3%;
+  padding: 5px;
 }

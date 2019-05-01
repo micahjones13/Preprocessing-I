@@ -2,6 +2,9 @@
 @text-size-small: 1.25rem;
 @text-size-large: 2.5rem;
 @text-size-med: 1.75rem;
+@text-size-extra-small: 1em;
+@background-lightblue: lightblue;
+@background-aliceblue: aliceblue;
 
 
 // Is this working?
@@ -68,23 +71,47 @@ html, body {
 	flex-flow: row-reverse wrap;
 	justify-content: center;
 	align-items: center;
+	background-color: @background-lightblue;
+		@media(max-width: 500px){
+			background: @background-lightblue;
+			display: flex;
+			flex-flow: column-reverse wrap;
+			padding: 10px;
+		}
+	
 	img{
 		width: 15%;
 		.border;
+		
 	}
 	ul{
 		padding: 10px;
 		font-size: @text-size-small;
 		list-style-type: square;
 		list-style-position: inside;
+		@media(max-width: 500px){
+			font-size: @text-size-extra-small;
+			padding:0px;
+		}
 		
 	}
 	p{
 		font-size: @text-size-small;
+		@media(max-width: 500px){
+			font-size: @text-size-extra-small;
+			padding: 10px;
+		}
 	}
 	.p-list{
 		width: 25%;
 		margin-left: 40px;
+		@media(max-width: 500px){
+			width: 100%;
+			margin: 0;
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+		}
 		
 
 	}
@@ -96,24 +123,38 @@ html, body {
 		background-color: lightslategrey;
 		border: 3px solid black;
 		width: 200px;
+		@media(max-width: 500px){
+			width: 50%;
+		}
 	}
-}
-body{
-	background: lightblue;
 }
 
 header{
-	margin-bottom: 20px;
+	
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-around;
 	align-items: center;
+	background: lightgray;
+	padding: 15px;
+	
 	h1{
 		font-size: @text-size-large;
+		@media(max-width: 500px){
+			font-size: @text-size-med;
+			.h1-span{
+				display: none;
+			}
+		}
 	}
 	a{
 		margin: 30px;
 		font-size: @text-size-small;
+		text-decoration: none;
+		@media(max-width: 500px){
+			font-size: @text-size-small;
+			margin: 25px;
+		}
 	}
 }
 .border{
@@ -128,33 +169,50 @@ h2{
 }
 //p-list from .intro also effecting .skills
 .skills{
-	margin-top: 95px;
+	
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	background: white;
 	padding: 20px;
-	img{
-		width: 33%;
-	}
+	
 	p{
 		font-size: @text-size-small;
 		margin-bottom: 20px;
+		text-decoration: underline;
 	}
 	ul{
 		font-size: @text-size-small;
 		list-style-type: square;
 		list-style-position: inside;
+		
 	}
+	li{
+		border: 1px solid lightgray;
+		padding: 10px;
+		background: @background-aliceblue;
+
+	}
+	.p-list{
+		
+		padding: 100px;
+	}
+	h2{
+		font-size: @text-size-large;
+	}
+	
 	
 }
 
 .table-border{
-	border: 1px solid black;
+	border: 3px solid black;
 }
 .work-history{
-	margin-top: 100px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 40px;
+	background: @background-lightblue;
 
 
 	table{
@@ -166,6 +224,7 @@ h2{
 		height: 50px; 
 		padding: 20px;
 		font-weight: bold;
+		background: lightgrey;
 	}
 	th, td{
 		.table-border;
@@ -176,8 +235,27 @@ h2{
 		text-align: left;
 		padding: 20px;
 	}
+	td{
+		font-size: @text-size-small;
+		background: aliceblue;
+	}
 	
-
-
+}
+footer{
+	background: gray;
+	height: 75px;
+	padding: 15px;
+	text-align: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items: center;
+	
+	img{
+		width: 3%;
+		padding: 5px;
+		
+	}
 
 }
