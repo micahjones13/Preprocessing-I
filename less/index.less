@@ -1,3 +1,9 @@
+//variables
+@text-size-small: 1.25rem;
+@text-size-large: 2.5rem;
+@text-size-med: 1.75rem;
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -34,6 +40,7 @@ body {
 }
 ol, ul {
 	list-style: none;
+	padding: 5px;
 }
 blockquote, q {
 	quotes: none;
@@ -56,4 +63,121 @@ table {
 html, body {
     height: 100%;
 }
+.intro{
+	display: flex;
+	flex-flow: row-reverse wrap;
+	justify-content: center;
+	align-items: center;
+	img{
+		width: 15%;
+		.border;
+	}
+	ul{
+		padding: 10px;
+		font-size: @text-size-small;
+		list-style-type: square;
+		list-style-position: inside;
+		
+	}
+	p{
+		font-size: @text-size-small;
+	}
+	.p-list{
+		width: 25%;
+		margin-left: 40px;
+		
 
+	}
+	button{
+		font-size: 15px;
+		padding: 10px;
+		margin-top: 10px;
+		border-radius: 15px;
+		background-color: lightslategrey;
+		border: 3px solid black;
+		width: 200px;
+	}
+}
+body{
+	background: lightblue;
+}
+
+header{
+	margin-bottom: 20px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+	h1{
+		font-size: @text-size-large;
+	}
+	a{
+		margin: 30px;
+		font-size: @text-size-small;
+	}
+}
+.border{
+	border: 1px solid red;
+}
+
+h2{
+	font-size: @text-size-med;
+	text-align: center;
+	margin-top: 30px;
+	
+}
+//p-list from .intro also effecting .skills
+.skills{
+	margin-top: 95px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	background: white;
+	padding: 20px;
+	img{
+		width: 33%;
+	}
+	p{
+		font-size: @text-size-small;
+		margin-bottom: 20px;
+	}
+	ul{
+		font-size: @text-size-small;
+		list-style-type: square;
+		list-style-position: inside;
+	}
+	
+}
+
+.table-border{
+	border: 1px solid black;
+}
+.work-history{
+	margin-top: 100px;
+
+
+	table{
+		width: 100%;
+		.table-border;
+	}
+	th{
+		font-size: @text-size-med;
+		height: 50px; 
+		padding: 20px;
+		font-weight: bold;
+	}
+	th, td{
+		.table-border;
+		height: 30px;
+		padding: 20px;
+	}
+	h2{
+		text-align: left;
+		padding: 20px;
+	}
+	
+
+
+
+}
