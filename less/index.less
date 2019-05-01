@@ -5,7 +5,7 @@
 @text-size-extra-small: 1em;
 @background-lightblue: lightblue;
 @background-aliceblue: aliceblue;
-
+@nav-bottom-border: 1px solid black;
 
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -90,7 +90,7 @@ html, body {
 		list-style-type: square;
 		list-style-position: inside;
 		@media(max-width: 500px){
-			font-size: @text-size-extra-small;
+			
 			padding:0px;
 		}
 		
@@ -98,7 +98,7 @@ html, body {
 	p{
 		font-size: @text-size-small;
 		@media(max-width: 500px){
-			font-size: @text-size-extra-small;
+			
 			padding: 10px;
 		}
 	}
@@ -140,8 +140,14 @@ header{
 	
 	h1{
 		font-size: @text-size-large;
+		@media (max-width: 700px){
+			.h1-span{
+				display: none;
+			}
+		}
 		@media(max-width: 500px){
 			font-size: @text-size-med;
+			padding: 10px;
 			.h1-span{
 				display: none;
 			}
@@ -153,7 +159,25 @@ header{
 		text-decoration: none;
 		@media(max-width: 500px){
 			font-size: @text-size-small;
-			margin: 25px;
+			margin: 0px;
+			padding: 10px;
+			border-bottom: @nav-bottom-border;
+			text-align: center;
+			
+		}
+	}
+	.top-border{
+		@media(max-width: 500px){
+			border-top: 1px solid black;
+			padding-top: 10px;
+		}
+	}
+	nav{
+		@media(max-width: 500px){
+			display: flex;
+			flex-flow: column wrap;
+			width: 100%;
+
 		}
 	}
 }
@@ -177,10 +201,15 @@ h2{
 	background: white;
 	padding: 20px;
 	
+	
 	p{
 		font-size: @text-size-small;
 		margin-bottom: 20px;
-		text-decoration: underline;
+		
+		@media(max-width: 500px){
+			margin: 0 auto;
+			padding: 10px;
+		}
 	}
 	ul{
 		font-size: @text-size-small;
@@ -197,6 +226,9 @@ h2{
 	.p-list{
 		
 		padding: 100px;
+		@media(max-width: 500px){
+			padding: 10px;
+		}
 	}
 	h2{
 		font-size: @text-size-large;
@@ -213,11 +245,17 @@ h2{
 	padding-left: 15px;
 	padding-bottom: 40px;
 	background: @background-lightblue;
-
+	@media(max-width: 500px){
+		display: flex;
+		flex-flow: column wrap;
+		align-content: center;
+		align-items: center;
+	}
 
 	table{
 		width: 100%;
 		.table-border;
+		vertical-align: middle;
 	}
 	th{
 		font-size: @text-size-med;
@@ -225,11 +263,22 @@ h2{
 		padding: 20px;
 		font-weight: bold;
 		background: lightgrey;
+		@media(max-width: 500px){
+			height: 20px;
+			width: 33%;
+			font-size: @text-size-small;
+		}
 	}
 	th, td{
 		.table-border;
 		height: 30px;
 		padding: 20px;
+		text-align: center;
+		@media(max-width: 500px){
+			height: 20px;
+			width: 33%;
+			
+		}
 	}
 	h2{
 		text-align: left;
@@ -238,13 +287,40 @@ h2{
 	td{
 		font-size: @text-size-small;
 		background: aliceblue;
+		@media(max-width: 500px){
+			font-size: @text-size-extra-small;
+		}
 	}
 	
 }
+.contact-me{
+	p{
+		font-size: @text-size-small;
+		padding: 10px;
+	}
+	form{
+		font-size: @text-size-small;
+		padding: 10px;
+	}
+	input{
+		border: 2px solid lightblue;
+		font-size: @text-size-small;
+		width: 20%;
+	}
+	.submit-btn{
+		width: 7%;
+		height: 40px;
+		margin: 10px;
+	}
+
+
+
+}
+
 footer{
 	background: gray;
 	height: 75px;
-	padding: 15px;
+	padding: 70px;
 	text-align: center;
 	text-align: center;
 	display: flex;
@@ -255,7 +331,9 @@ footer{
 	img{
 		width: 3%;
 		padding: 5px;
-		
+		@media (max-width: 500px){
+			width: 10%;
+		}
 	}
 
 }

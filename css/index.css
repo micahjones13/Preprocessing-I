@@ -162,7 +162,6 @@ body {
 }
 @media (max-width: 500px) {
   .intro ul {
-    font-size: 1em;
     padding: 0px;
   }
 }
@@ -171,7 +170,6 @@ body {
 }
 @media (max-width: 500px) {
   .intro p {
-    font-size: 1em;
     padding: 10px;
   }
 }
@@ -213,9 +211,15 @@ header {
 header h1 {
   font-size: 2.5rem;
 }
+@media (max-width: 700px) {
+  header h1 .h1-span {
+    display: none;
+  }
+}
 @media (max-width: 500px) {
   header h1 {
     font-size: 1.75rem;
+    padding: 10px;
   }
   header h1 .h1-span {
     display: none;
@@ -229,7 +233,23 @@ header a {
 @media (max-width: 500px) {
   header a {
     font-size: 1.25rem;
-    margin: 25px;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  header .top-border {
+    border-top: 1px solid black;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
   }
 }
 .border {
@@ -251,7 +271,12 @@ h2 {
 .skills p {
   font-size: 1.25rem;
   margin-bottom: 20px;
-  text-decoration: underline;
+}
+@media (max-width: 500px) {
+  .skills p {
+    margin: 0 auto;
+    padding: 10px;
+  }
 }
 .skills ul {
   font-size: 1.25rem;
@@ -266,6 +291,11 @@ h2 {
 .skills .p-list {
   padding: 100px;
 }
+@media (max-width: 500px) {
+  .skills .p-list {
+    padding: 10px;
+  }
+}
 .skills h2 {
   font-size: 2.5rem;
 }
@@ -278,9 +308,18 @@ h2 {
   padding-bottom: 40px;
   background: lightblue;
 }
+@media (max-width: 500px) {
+  .work-history {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+  }
+}
 .work-history table {
   width: 100%;
   border: 3px solid black;
+  vertical-align: middle;
 }
 .work-history th {
   font-size: 1.75rem;
@@ -289,11 +328,26 @@ h2 {
   font-weight: bold;
   background: lightgrey;
 }
+@media (max-width: 500px) {
+  .work-history th {
+    height: 20px;
+    width: 33%;
+    font-size: 1.25rem;
+  }
+}
 .work-history th,
 .work-history td {
   border: 3px solid black;
   height: 30px;
   padding: 20px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .work-history th,
+  .work-history td {
+    height: 20px;
+    width: 33%;
+  }
 }
 .work-history h2 {
   text-align: left;
@@ -303,10 +357,33 @@ h2 {
   font-size: 1.25rem;
   background: aliceblue;
 }
+@media (max-width: 500px) {
+  .work-history td {
+    font-size: 1em;
+  }
+}
+.contact-me p {
+  font-size: 1.25rem;
+  padding: 10px;
+}
+.contact-me form {
+  font-size: 1.25rem;
+  padding: 10px;
+}
+.contact-me input {
+  border: 2px solid lightblue;
+  font-size: 1.25rem;
+  width: 20%;
+}
+.contact-me .submit-btn {
+  width: 7%;
+  height: 40px;
+  margin: 10px;
+}
 footer {
   background: gray;
   height: 75px;
-  padding: 15px;
+  padding: 70px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -316,4 +393,9 @@ footer {
 footer img {
   width: 3%;
   padding: 5px;
+}
+@media (max-width: 500px) {
+  footer img {
+    width: 10%;
+  }
 }
