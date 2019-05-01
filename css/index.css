@@ -255,6 +255,9 @@ header a {
 .border {
   border: 1px solid red;
 }
+.bottom-border {
+  border-bottom: 1px solid black;
+}
 h2 {
   font-size: 1.75rem;
   text-align: center;
