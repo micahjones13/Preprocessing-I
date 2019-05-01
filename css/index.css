@@ -375,10 +375,44 @@ h2 {
   font-size: 1.25rem;
   width: 20%;
 }
+@media (max-width: 500px) {
+  .contact-me input {
+    width: 40%;
+  }
+}
 .contact-me .submit-btn {
   width: 7%;
   height: 40px;
   margin: 10px;
+}
+@media (max-width: 500px) {
+  .contact-me .submit-btn {
+    width: 30%;
+  }
+}
+.contact-me img {
+  width: 33%;
+}
+@media (max-width: 500px) {
+  .contact-me img {
+    display: none;
+  }
+}
+.contact-me .img-contact {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+.contact-me .img-contact p {
+  text-align: center;
+  margin-right: 30px;
+}
+@media (max-width: 500px) {
+  .contact-me .img-contact p {
+    margin: 0px;
+  }
 }
 footer {
   background: gray;
