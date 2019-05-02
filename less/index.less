@@ -1,3 +1,13 @@
+//variables
+@text-size-small: 1.25rem;
+@text-size-large: 2.5rem;
+@text-size-med: 1.75rem;
+@text-size-extra-small: 1em;
+@background-lightblue: lightblue;
+@background-aliceblue: aliceblue;
+@nav-bottom-border: 1px solid black;
+//escape values
+@mobile: ~"(max-width: 500px)";
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -34,6 +44,7 @@ body {
 }
 ol, ul {
 	list-style: none;
+	padding: 5px;
 }
 blockquote, q {
 	quotes: none;
@@ -56,4 +67,307 @@ table {
 html, body {
     height: 100%;
 }
+.intro{
+	display: flex;
+	flex-flow: row-reverse wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: @background-lightblue;
+		@media @mobile {
+			background: @background-lightblue;
+			display: flex;
+			flex-flow: column-reverse wrap;
+			padding: 10px;
+		}
+	
+	img{
+		width: 15%;
+		.border;
+		
+	}
+	ul{
+		padding: 10px;
+		font-size: @text-size-small;
+		list-style-type: square;
+		list-style-position: inside;
+		@media @mobile{
+			
+			padding:0px;
+		}
+		
+	}
+	p{
+		font-size: @text-size-small;
+		@media @mobile{
+			
+			padding: 10px;
+		}
+	}
+	.p-list{
+		width: 25%;
+		margin-left: 40px;
+		@media @mobile{
+			width: 100%;
+			margin: 0;
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+		}
+		
 
+	}
+	button{
+		font-size: 15px;
+		padding: 10px;
+		margin-top: 10px;
+		border-radius: 15px;
+		background-color: lightslategrey;
+		border: 3px solid black;
+		width: 200px;
+		&:hover{
+			background-color: lighten(lightslategrey, 20%); //my first LESS function :)
+		}
+		@media @mobile{
+			width: 50%;
+		}
+	}
+}
+
+header{
+	
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+	background: lightgray;
+	padding: 15px;
+	
+	h1{
+		font-size: @text-size-large;
+		@media (max-width: 700px){
+			.h1-span{
+				display: none;
+			}
+		}
+		@media @mobile{
+			font-size: @text-size-med;
+			padding: 10px;
+			.h1-span{
+				display: none;
+			}
+		}
+	}
+	a{
+		margin: 30px;
+		font-size: @text-size-small;
+		text-decoration: none;
+		@media @mobile{
+			font-size: @text-size-small;
+			margin: 0px;
+			padding: 10px;
+			.bottom-border;
+			text-align: center;
+			
+		}
+	}
+	.top-border{
+		@media @mobile{
+			border-top: 1px solid black;
+			padding-top: 10px;
+		}
+	}
+	nav{
+		@media @mobile {
+			display: flex;
+			flex-flow: column wrap;
+			width: 100%;
+
+		}
+	}
+}
+.border{
+	border: 1px solid red;
+}
+.bottom-border{
+	border-bottom: 1px solid black;
+}
+
+h2{
+	font-size: @text-size-med;
+	text-align: center;
+	margin-top: 30px;
+	
+}
+//p-list from .intro also effecting .skills
+.skills{
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	padding: 20px;
+	
+	
+	p{
+		font-size: @text-size-small;
+		margin-bottom: 20px;
+		
+		@media @mobile {
+			margin: 0 auto;
+			padding: 10px;
+		}
+	}
+	ul{
+		font-size: @text-size-small;
+		list-style-type: square;
+		list-style-position: inside;
+		
+	}
+	li{
+		border: 1px solid lightgray;
+		padding: 10px;
+		background: @background-aliceblue;
+
+	}
+	.p-list{
+		
+		padding: 100px;
+		@media @mobile {
+			padding: 10px;
+		}
+	}
+	h2{
+		font-size: @text-size-large;
+	}
+	
+	
+}
+
+.table-border{
+	border: 3px solid black;
+}
+.work-history{
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 40px;
+	background: @background-lightblue;
+	@media @mobile {
+		display: flex;
+		flex-flow: column wrap;
+		align-content: center;
+		align-items: center;
+	}
+
+	table{
+		width: 100%;
+		.table-border;
+		vertical-align: middle;
+	}
+	th{
+		font-size: @text-size-med;
+		height: 50px; 
+		padding: 20px;
+		font-weight: bold;
+		background: lightgrey;
+		@media @mobile {
+			height: 20px;
+			width: 33%;
+			font-size: @text-size-small;
+		}
+	}
+	th, td{
+		.table-border;
+		height: 30px;
+		padding: 20px;
+		text-align: center;
+		@media @mobile {
+			height: 20px;
+			width: 33%;
+			
+		}
+	}
+	h2{
+		text-align: left;
+		padding: 20px;
+	}
+	td{
+		font-size: @text-size-small;
+		background: aliceblue;
+		@media @mobile {
+			font-size: @text-size-extra-small;
+		}
+	}
+	
+}
+.contact-me{
+	
+	p{
+		font-size: @text-size-small;
+		padding: 10px;
+	}
+	form{
+		font-size: @text-size-small;
+		padding: 10px;
+	}
+	input{
+		border: 2px solid lightblue;
+		font-size: @text-size-small;
+		width: 20%;
+		@media @mobile {
+			width: 40%;
+		}
+	}
+	.submit-btn{
+		width: 7%;
+		height: 40px;
+		margin: 10px;
+		@media @mobile {
+			width: 30%;
+		}
+	}
+	img{
+		width: 33%;
+		@media @mobile {
+			display: none;
+		}
+	}
+	.img-contact{
+		display: flex;
+		flex-flow: row-reverse wrap;
+		justify-content: center;
+		padding: 20px;
+		align-items: center;
+		p{
+			text-align:center;
+			margin-right: 30px;
+			@media @mobile {
+				margin: 0px;
+			}
+		}
+	}
+
+
+
+}
+
+footer{
+	background: gray;
+	height: 75px;
+	padding: 70px;
+	text-align: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items: center;
+	
+	img{
+		width: 3%;
+		padding: 5px;
+		@media @mobile {
+			width: 10%;
+		}
+	}
+
+}

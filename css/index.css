@@ -1,1 +1,441 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 5px;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.intro {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+@media (max-width: 500px) {
+  .intro {
+    background: lightblue;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    padding: 10px;
+  }
+}
+.intro img {
+  width: 15%;
+  border: 1px solid red;
+}
+.intro ul {
+  padding: 10px;
+  font-size: 1.25rem;
+  list-style-type: square;
+  list-style-position: inside;
+}
+@media (max-width: 500px) {
+  .intro ul {
+    padding: 0px;
+  }
+}
+.intro p {
+  font-size: 1.25rem;
+}
+@media (max-width: 500px) {
+  .intro p {
+    padding: 10px;
+  }
+}
+.intro .p-list {
+  width: 25%;
+  margin-left: 40px;
+}
+@media (max-width: 500px) {
+  .intro .p-list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+.intro button {
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: lightslategrey;
+  border: 3px solid black;
+  width: 200px;
+}
+.intro button:hover {
+  background-color: #b1bbc5;
+}
+@media (max-width: 500px) {
+  .intro button {
+    width: 50%;
+  }
+}
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: lightgray;
+  padding: 15px;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+@media (max-width: 700px) {
+  header h1 .h1-span {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.75rem;
+    padding: 10px;
+  }
+  header h1 .h1-span {
+    display: none;
+  }
+}
+header a {
+  margin: 30px;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  header a {
+    font-size: 1.25rem;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  header .top-border {
+    border-top: 1px solid black;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+}
+.border {
+  border: 1px solid red;
+}
+.bottom-border {
+  border-bottom: 1px solid black;
+}
+h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 30px;
+}
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+}
+.skills p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .skills p {
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+.skills ul {
+  font-size: 1.25rem;
+  list-style-type: square;
+  list-style-position: inside;
+}
+.skills li {
+  border: 1px solid lightgray;
+  padding: 10px;
+  background: aliceblue;
+}
+.skills .p-list {
+  padding: 100px;
+}
+@media (max-width: 500px) {
+  .skills .p-list {
+    padding: 10px;
+  }
+}
+.skills h2 {
+  font-size: 2.5rem;
+}
+.table-border {
+  border: 3px solid black;
+}
+.work-history {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 40px;
+  background: lightblue;
+}
+@media (max-width: 500px) {
+  .work-history {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+  }
+}
+.work-history table {
+  width: 100%;
+  border: 3px solid black;
+  vertical-align: middle;
+}
+.work-history th {
+  font-size: 1.75rem;
+  height: 50px;
+  padding: 20px;
+  font-weight: bold;
+  background: lightgrey;
+}
+@media (max-width: 500px) {
+  .work-history th {
+    height: 20px;
+    width: 33%;
+    font-size: 1.25rem;
+  }
+}
+.work-history th,
+.work-history td {
+  border: 3px solid black;
+  height: 30px;
+  padding: 20px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .work-history th,
+  .work-history td {
+    height: 20px;
+    width: 33%;
+  }
+}
+.work-history h2 {
+  text-align: left;
+  padding: 20px;
+}
+.work-history td {
+  font-size: 1.25rem;
+  background: aliceblue;
+}
+@media (max-width: 500px) {
+  .work-history td {
+    font-size: 1em;
+  }
+}
+.contact-me p {
+  font-size: 1.25rem;
+  padding: 10px;
+}
+.contact-me form {
+  font-size: 1.25rem;
+  padding: 10px;
+}
+.contact-me input {
+  border: 2px solid lightblue;
+  font-size: 1.25rem;
+  width: 20%;
+}
+@media (max-width: 500px) {
+  .contact-me input {
+    width: 40%;
+  }
+}
+.contact-me .submit-btn {
+  width: 7%;
+  height: 40px;
+  margin: 10px;
+}
+@media (max-width: 500px) {
+  .contact-me .submit-btn {
+    width: 30%;
+  }
+}
+.contact-me img {
+  width: 33%;
+}
+@media (max-width: 500px) {
+  .contact-me img {
+    display: none;
+  }
+}
+.contact-me .img-contact {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+.contact-me .img-contact p {
+  text-align: center;
+  margin-right: 30px;
+}
+@media (max-width: 500px) {
+  .contact-me .img-contact p {
+    margin: 0px;
+  }
+}
+footer {
+  background: gray;
+  height: 75px;
+  padding: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+footer img {
+  width: 3%;
+  padding: 5px;
+}
+@media (max-width: 500px) {
+  footer img {
+    width: 10%;
+  }
+}
