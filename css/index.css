@@ -195,6 +195,9 @@ body {
   border: 3px solid black;
   width: 200px;
 }
+.intro button:hover {
+  background-color: #b1bbc5;
+}
 @media (max-width: 500px) {
   .intro button {
     width: 50%;

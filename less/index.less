@@ -6,7 +6,8 @@
 @background-lightblue: lightblue;
 @background-aliceblue: aliceblue;
 @nav-bottom-border: 1px solid black;
-
+//escape values
+@mobile: ~"(max-width: 500px)";
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -72,7 +73,7 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	background-color: @background-lightblue;
-		@media(max-width: 500px){
+		@media @mobile {
 			background: @background-lightblue;
 			display: flex;
 			flex-flow: column-reverse wrap;
@@ -89,7 +90,7 @@ html, body {
 		font-size: @text-size-small;
 		list-style-type: square;
 		list-style-position: inside;
-		@media(max-width: 500px){
+		@media @mobile{
 			
 			padding:0px;
 		}
@@ -97,7 +98,7 @@ html, body {
 	}
 	p{
 		font-size: @text-size-small;
-		@media(max-width: 500px){
+		@media @mobile{
 			
 			padding: 10px;
 		}
@@ -105,7 +106,7 @@ html, body {
 	.p-list{
 		width: 25%;
 		margin-left: 40px;
-		@media(max-width: 500px){
+		@media @mobile{
 			width: 100%;
 			margin: 0;
 			display: flex;
@@ -123,7 +124,10 @@ html, body {
 		background-color: lightslategrey;
 		border: 3px solid black;
 		width: 200px;
-		@media(max-width: 500px){
+		&:hover{
+			background-color: lighten(lightslategrey, 20%); //my first LESS function :)
+		}
+		@media @mobile{
 			width: 50%;
 		}
 	}
@@ -145,7 +149,7 @@ header{
 				display: none;
 			}
 		}
-		@media(max-width: 500px){
+		@media @mobile{
 			font-size: @text-size-med;
 			padding: 10px;
 			.h1-span{
@@ -157,7 +161,7 @@ header{
 		margin: 30px;
 		font-size: @text-size-small;
 		text-decoration: none;
-		@media(max-width: 500px){
+		@media @mobile{
 			font-size: @text-size-small;
 			margin: 0px;
 			padding: 10px;
@@ -167,13 +171,13 @@ header{
 		}
 	}
 	.top-border{
-		@media(max-width: 500px){
+		@media @mobile{
 			border-top: 1px solid black;
 			padding-top: 10px;
 		}
 	}
 	nav{
-		@media(max-width: 500px){
+		@media @mobile {
 			display: flex;
 			flex-flow: column wrap;
 			width: 100%;
@@ -209,7 +213,7 @@ h2{
 		font-size: @text-size-small;
 		margin-bottom: 20px;
 		
-		@media(max-width: 500px){
+		@media @mobile {
 			margin: 0 auto;
 			padding: 10px;
 		}
@@ -229,7 +233,7 @@ h2{
 	.p-list{
 		
 		padding: 100px;
-		@media(max-width: 500px){
+		@media @mobile {
 			padding: 10px;
 		}
 	}
@@ -248,7 +252,7 @@ h2{
 	padding-left: 15px;
 	padding-bottom: 40px;
 	background: @background-lightblue;
-	@media(max-width: 500px){
+	@media @mobile {
 		display: flex;
 		flex-flow: column wrap;
 		align-content: center;
@@ -266,7 +270,7 @@ h2{
 		padding: 20px;
 		font-weight: bold;
 		background: lightgrey;
-		@media(max-width: 500px){
+		@media @mobile {
 			height: 20px;
 			width: 33%;
 			font-size: @text-size-small;
@@ -277,7 +281,7 @@ h2{
 		height: 30px;
 		padding: 20px;
 		text-align: center;
-		@media(max-width: 500px){
+		@media @mobile {
 			height: 20px;
 			width: 33%;
 			
@@ -290,7 +294,7 @@ h2{
 	td{
 		font-size: @text-size-small;
 		background: aliceblue;
-		@media(max-width: 500px){
+		@media @mobile {
 			font-size: @text-size-extra-small;
 		}
 	}
@@ -310,7 +314,7 @@ h2{
 		border: 2px solid lightblue;
 		font-size: @text-size-small;
 		width: 20%;
-		@media(max-width: 500px){
+		@media @mobile {
 			width: 40%;
 		}
 	}
@@ -318,13 +322,13 @@ h2{
 		width: 7%;
 		height: 40px;
 		margin: 10px;
-		@media(max-width: 500px){
+		@media @mobile {
 			width: 30%;
 		}
 	}
 	img{
 		width: 33%;
-		@media(max-width: 500px){
+		@media @mobile {
 			display: none;
 		}
 	}
@@ -337,7 +341,7 @@ h2{
 		p{
 			text-align:center;
 			margin-right: 30px;
-			@media(max-width: 500px){
+			@media @mobile {
 				margin: 0px;
 			}
 		}
@@ -361,7 +365,7 @@ footer{
 	img{
 		width: 3%;
 		padding: 5px;
-		@media (max-width: 500px){
+		@media @mobile {
 			width: 10%;
 		}
 	}
